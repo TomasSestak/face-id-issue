@@ -15,7 +15,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.yolk.faceidissue"
     },
     "android": {
       "adaptiveIcon": {
@@ -23,8 +24,21 @@
         "backgroundColor": "#ffffff"
       }
     },
+    "plugins": [
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Allow $(PRODUCT_NAME) to use Face ID."
+        }
+      ]
+    ],
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "2cfcceae-7bd5-4675-82cc-d59ff696fcc9"
+      }
     }
   }
 }
